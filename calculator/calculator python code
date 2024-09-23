@@ -1,0 +1,16 @@
+#calculator
+num1=int(input("enter the first number"))
+num2=int(input("enter the second number"))
+choice=input("enter the operation you want to perform\n+ for addition\n- for subtraction \n for multiplication \n / for division\n^ for exponent power\n")
+if choice=="+":
+    print("addition of two numbers is",num1+num2)
+elif choice=="-":
+    print("addition of two numbers is",num1-num2)
+elif choice=="*":
+    print("addition of two numbers is",num1*num2)
+elif choice=="/":
+    print("addition of two numbers is",num1/num2)
+elif choice=="^":
+    print("addition of two numbers is",num1**num2)
+else:
+    print("invalid choice")
