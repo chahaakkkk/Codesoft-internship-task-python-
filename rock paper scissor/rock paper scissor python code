@@ -1,0 +1,57 @@
+#rock paper scissors
+import random
+def rps():
+    r=int(input("enter the number of rounds you want to play"))
+    us=0
+    cs=0
+    for i in range(r):
+        u=input("enter your choice \t rock/paper/scissor").lower()
+        c=random.choice(["rock","paper","scissor"])
+        if u==c:
+            print("user choice:",u,"\tcomputer choice:",c,"DRAW")
+            print("user score:",us,"\tcomputer score",cs)
+        elif u=="rock":
+            if c=="paper":
+                print("user choice:",u,"\tcomputer choice:",c,"COMPUTER WIN")
+                cs=cs+1
+                print("user score:",us,"\tcomputer score",cs)
+            elif c=="scissor":
+                print("user choice:",u,"\tcomputer choice:",c,"USER WIN")
+                us=us+1
+                print("user score:",us,"\tcomputer score",cs)
+        elif u=="paper":
+            if c=="rock":
+                print("user choice:",u,"\tcomputer choice:",c,"USER WIN")
+                us=us+1
+                print("user score:",us,"\tcomputer score",cs)
+            elif c=="scissor":
+                print("user choice:",u,"\tcomputer choice:",c,"COMPUTER WIN")
+                cs=cs+1
+                print("user score:",us,"\tcomputer score",cs)
+        elif u=="scissor": 
+            if c=="rock":
+                print("user choice:",u,"\tcomputer choice:",c,"COMPUTER WIN")
+                cs=cs+1
+                print("user score:",us,"\tcomputer score",cs)
+            elif c=="paper":
+                print("user choice:",u,"\tcomputer choice:",c,"USER WIN") 
+                us=us+1
+                print("user score:",us,"\tcomputer score",cs)
+        elif u=="exit": 
+            break
+        else:
+            print("invalid choice")
+    if us>cs:
+        print("USER SCORE:",us,"\tCOMPUTER SCORE",cs,"USER WIN!!!")
+    elif us<cs:
+        print("USER SCORE:",us,"\tCOMPUTER SCORE",cs,"COMPUTER WIN!!!")
+    else:
+        print("USER SCORE:",us,"\tCOMPUTER SCORE",cs,"DRAW")
+rps()
+while True:
+    p=input("do you want to play again").lower()
+    if p=="yes":
+        rps()
+    else:
+        print("thank you")
+        break
